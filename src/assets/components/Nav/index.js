@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './navbar.css';
 
-function Nav() {
+function Nav({ currentPage, changePage }) {
 	const [active, setActive] = useState('navMenu');
 	const [toggleIcon, setToggleIcon] = useState('navToggler');
 
@@ -19,27 +19,37 @@ function Nav() {
 	return (
 		<nav className='nav'>
 			<a href='#' className='navBrand'>
-				Michael Thai
+				<span>
+					Michael Thai
+				</span>
 			</a>
 			<ul className={active}>
 				<li className='navItem'>
 					<a href='#about' className='navLink'>
-						About
+						<span onClick={() => changePage('about')} className={currentPage === 'about' ? 'navActive' : ''}>
+							About
+						</span>
 					</a>
 				</li>
 				<li className='navItem'>
 					<a href='#resume' className='navLink'>
-						Resume
+						<span onClick={() => changePage('resume')} className={currentPage === 'resume' ? 'navActive' : ''}>
+							Resume
+						</span>
 					</a>
 				</li>
 				<li className='navItem'>
 					<a href='#portfolio' className='navLink'>
-						Portfolio
+						<span onClick={() => changePage('portfolio')} className={currentPage === 'portfolio' ? 'navActive' : ''}>
+							Portfolio
+						</span>
 					</a>
 				</li>
 				<li className='navItem'>
 					<a href='#contact' className='navLink'>
-						Contact
+						<span onClick={() => changePage('contact')} className={currentPage === 'contact' ? 'navActive' : ''}>
+							Contact
+						</span>
 					</a>
 				</li>
 			</ul>

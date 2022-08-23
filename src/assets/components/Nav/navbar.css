@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
   box-sizing: border-box;
 }
@@ -44,7 +46,7 @@ a:focus {
   font-size: 2.5rem;
 }
 
-.nav{
+.nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -56,6 +58,7 @@ a:focus {
   text-transform: uppercase;
   font-weight: bold;
 }
+
 .navMenu {
   display: flex;
   align-items: center;
@@ -76,8 +79,8 @@ a:focus {
   display: none;
 }
 
-@media screen and (max-width: 768px){ 
-  .navToggler{
+@media screen and (max-width: 768px) {
+  .navToggler {
     display: block;
     cursor: pointer;
   }
@@ -88,7 +91,7 @@ a:focus {
     right: 0;
     width: 50%;
     height: 93vh;
-    background: #588B8B;
+    background: var(--tertiary);
     flex-direction: column;
     transform: translateX(100%);
     transition: 0.5s ease-in;
@@ -104,9 +107,11 @@ a:focus {
 .toggle .line1 {
   transform: rotate(-45deg) translate(-4px, 5px);
 }
+
 .toggle .line2 {
   opacity: 0;
 }
+
 .toggle .line3 {
   transform: rotate(45deg) translate(-4px, -5px);
 }

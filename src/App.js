@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 
 // import components
 import Footer from './assets/components/Footer';
-import Header from './assets/components/Header';
+import Nav from './assets/components/Nav';
+
 
 // import pages
 import About from './assets/components/pages/About';
 import Portfolio from './assets/components/pages/Portfolio';
+import Contact from './assets/components/pages/Contact';
+import Resume from './assets/components/pages/Resume';
 
 
 function App() {
@@ -18,6 +21,10 @@ function App() {
         return <About />
       case 'portfolio':
         return <Portfolio />
+      case 'contact':
+        return <Contact />
+      case 'resume':
+        return <Resume />
       default:
         return <About />
     }
@@ -25,9 +32,9 @@ function App() {
 
   return (
     <div>
-      <Header
+      <Nav
         currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
+        changePage={setCurrentPage}
       />
       <main>
         {renderPage()}
