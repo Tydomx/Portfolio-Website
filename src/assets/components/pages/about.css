@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --primary: #00910D;
+  --secondary: #3968ED;
+  --tertiary: #000;
+  --lightGreen: #4cbb16;
+  --white: #fff;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background: url('../../../assets/images/greenBlue.jpg');
+  background-position: 0 1000px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+h1 {
+  color: var(--secondary);
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 8px;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.image {
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+}
+
+p {
+  font-size: 2rem;
+  line-height: 5rem;
+  margin-bottom: 5rem;
+}
