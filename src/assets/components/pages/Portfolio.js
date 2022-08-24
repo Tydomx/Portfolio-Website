@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import './portfolio.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 export default function Portfolio() {
 	const projectPortfolioArr = [
@@ -52,7 +54,7 @@ export default function Portfolio() {
 							<img className="portfolioProjectImage flex-row"
 								src={require(`../../../assets/images/${image}`)}
 								alt={name}
-								style={{ width: "65%", height: "325px" }} />
+								style={{ width: "75%", height: "275px" }} />
 						</a>
 						<div className="repoLink">
 							<h3>Repo Link</h3>
@@ -60,7 +62,6 @@ export default function Portfolio() {
 								<p>{repo}</p>
 							</a>
 						</div>
-
 					</div>
 				))}
 			</div>
