@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import './portfolio.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+
 
 export default function Portfolio() {
 	const projectPortfolioArr = [
