@@ -45,7 +45,7 @@ export default function ContactForm() {
 		<section>
 			<h1>Contact me</h1>
 			<form id="contact-form" onSubmit={handleSubmit}>
-				<div>
+				<div className="nameForm">
 					<label htmlFor="name">Name:</label>
 					{/* default value initializes the state, onBlur eventListener syncs the state or updates current data while data is typed */}
 					<input type='text' defaultValue={name} onBlur={handleChange} name='name' />

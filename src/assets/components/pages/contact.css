@@ -1,0 +1,10 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	--primary: #00910D;
+	--secondary: #3968ED;
+	--tertiary: #000;
+	--lightGreen: #97c771;
+	--white: #fff;
+}
