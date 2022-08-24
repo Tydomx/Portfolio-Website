@@ -7,7 +7,7 @@
   --primary: #00910D;
   --secondary: #3968ED;
   --tertiary: #000;
-  --lightGreen: #4cbb16;
+  --lightGreen: #97c771;
   --white: #fff;
 }
 
@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  background: url('../../../assets/images/greenBlue.jpg');
+  background: url('../../../assets/images/darkgreenjpg.jpg');
   background-position: 0 1000px;
   font-family: 'Roboto', sans-serif;
 }

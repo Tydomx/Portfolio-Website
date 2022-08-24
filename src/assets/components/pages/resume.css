@@ -1,0 +1,37 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	--primary: #00910D;
+	--secondary: #3968ED;
+	--tertiary: #000;
+	--lightGreen: #97c771;
+	--white: #fff;
+}
+
+
+.containerResume {
+	padding-left: 50px;
+}
+
+.resumeTitle {
+	font-weight: bold;
+}
+
+.listTitle {
+	font-size: 25px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.resumeLink a:hover {
+	color: var(--secondary)
+}
+
+.resumeLink a:focus {
+	color: var(--tertiary)
+}
+
+li {
+	padding: 5px;
+}

@@ -1,13 +1,14 @@
 import React from "react";
+import './resume.css';
 
 export default function Resume() {
 	return (
-		<div>
-			<h2>Resume</h2>
+		<section className="containerResume">
+			<h2 className="resumeTitle">Resume</h2>
 
-			<p>Download the <a href="">resume</a></p>
+			<p className="resumeLink">Download <a href="">resume</a></p>
 			<div>
-				<h3>Front-end Proficiencies</h3>
+				<h3 className="listTitle">Front-end Proficiencies 🖥️</h3>
 				<ul>
 					<li>JavaScript</li>
 					<li>HTML</li>
@@ -19,7 +20,7 @@ export default function Resume() {
 				</ul>
 			</div>
 			<div>
-				<h3>Back-end Proficiencies</h3>
+				<h3 className="listTitle">Back-end Proficiencies 🖧</h3>
 				<ul>
 					<li>APIs</li>
 					<li>Node</li>
@@ -28,7 +29,7 @@ export default function Resume() {
 					<li>MongoDB</li>
 				</ul>
 			</div>
-		</div>
+		</section>
 
 	)
 }

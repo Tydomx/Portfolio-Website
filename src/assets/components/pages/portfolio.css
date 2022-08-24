@@ -5,7 +5,7 @@
 	--primary: #00910D;
 	--secondary: #3968ED;
 	--tertiary: #000;
-	--lightGreen: #4cbb16;
+	--lightGreen: #97c771;
 	--white: #fff;
 }
 
@@ -26,6 +26,7 @@
 	padding: 10px;
 	display: flex;
 	align-items: center;
+	font-weight: bolder;
 }
 
 .repoLink a {
@@ -33,11 +34,11 @@
 }
 
 .repoLink a:hover {
-	color: var(--primary)
+	color: var(--secondary)
 }
 
 .repoLink a:focus {
-	color: var(--secondary)
+	color: var(--white)
 }
 
 img:hover {
