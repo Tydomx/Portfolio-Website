@@ -1,0 +1,45 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	--primary: #00910D;
+	--secondary: #3968ED;
+	--tertiary: #000;
+	--lightGreen: #4cbb16;
+	--white: #fff;
+}
+
+.portfolioProjectImage {
+	border: 3px solid var(--tertiary);
+}
+
+.containerProjects {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.portfolioTitle {
+	margin: auto;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.repoLink a {
+	color: var(--tertiary)
+}
+
+.repoLink a:hover {
+	color: var(--primary)
+}
+
+.repoLink a:focus {
+	color: var(--secondary)
+}
+
+img:hover {
+	background-color: gray;
+	opacity: 0.5;
+}
