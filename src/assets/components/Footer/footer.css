@@ -1,0 +1,10 @@
+.faIcons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.faIcon {
+	padding: 10px;
+	height: 50px;
+}

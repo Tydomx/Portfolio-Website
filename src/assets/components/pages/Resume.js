@@ -6,7 +6,11 @@ export default function Resume() {
 		<section className="containerResume">
 			<h2 className="resumeTitle">Resume</h2>
 
-			<p className="resumeLink">Download <a href="">resume</a></p>
+			<p className="resumeLink">Download
+				<a className="btn btn-primary" href='src\assets\resumePDF\MichaelThai-3.pdf' download>
+					resume
+				</a>
+			</p>
 			<div>
 				<h3 className="listTitle">Front-end Proficiencies 🖥️</h3>
 				<ul>
