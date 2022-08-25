@@ -5,12 +5,6 @@ import './portfolio.css';
 export default function Portfolio() {
 	const projectPortfolioArr = [
 		{
-			name: 'Run Buddy',
-			image: 'run_buddy_screenshot.png',
-			repo: 'https://github.com/Tydomx/run-buddy',
-			deployed: 'https://tydomx.github.io/run-buddy/'
-		},
-		{
 			name: 'barkr meetup',
 			image: 'barkr.png',
 			repo: 'https://github.com/Tydomx/barkr-meetup',
@@ -21,6 +15,12 @@ export default function Portfolio() {
 			image: 'MarvelProjectScreenshot.png',
 			repo: 'https://github.com/Tydomx/Marvel_project',
 			deployed: 'https://tydomx.github.io/Marvel_project/'
+		},
+		{
+			name: 'EatSleepWorkoutRepeat',
+			image: 'EatSleepWorkout.png',
+			repo: 'https://github.com/zurisha7/EatSleepWorkoutRepeat',
+			deployed: 'https://eatsleepworkoutrepeat.herokuapp.com/'
 		},
 		{
 			name: 'Code Quiz',
