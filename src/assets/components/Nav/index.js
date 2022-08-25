@@ -19,7 +19,7 @@ function Nav({ currentPage, changePage }) {
 	return (
 		<nav className='nav'>
 			<a href='#' className='navBrand'>
-				<span>
+				<span onClick={() => changePage('about')} className={currentPage === 'about' ? 'navActive' : ''}>
 					Michael Thai
 				</span>
 			</a>
