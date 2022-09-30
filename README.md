@@ -15,4 +15,4 @@ This portfolio website showcases me and my projects, resume, and a way to contac
 
 
 # Deployed link
-https://portfolio-website-mt.herokuapp.com/
+https://michael-thai.herokuapp.com/
