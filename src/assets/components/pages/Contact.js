@@ -2,26 +2,19 @@ import React, { useState } from "react";
 import { validateEmail } from '../../../utils/helpers';
 
 export default function ContactForm() {
-	// hook to manage form data
-	// ability to initialize values of state
 	const [formState, setFormState] = useState({ name: '', email: '', message: '' });
 	const { name, email, message } = formState;
-	// handling error state
 	const [errorMessage, setErrorMessage] = useState('');
 
 	function handleChange(e) {
-		// if input is email, then validate the vaule of the input field with validateEmail function and assign it's return to isValid 
 		if (e.target.name === 'email') {
 			const isValid = validateEmail(e.target.value);
-			console.log(isValid);
-			// isValid conditional statement
 			if (!isValid) {
 				setErrorMessage('Your email is invalid');
 			} else {
 				setErrorMessage('');
 			}
 		} else {
-			// checking message/name form element values
 			if (!e.target.value.length) {
 				setErrorMessage(`Please fill out the form`);
 			} else {
@@ -29,10 +22,8 @@ export default function ContactForm() {
 			}
 		}
 
-		// only allows state to update with user input if there is not error message
 		if (!errorMessage) {
-			// target.name refers to name attribute of the form element i.e., name, email, message
-			setFormState({ ...formState, [e.target.name]: e.target.value })
+			setFormState({ ...formState, [e.target.name]: e.target.value });
 		}
 	}
 
@@ -42,30 +33,94 @@ export default function ContactForm() {
 	}
 
 	return (
-		<section>
-			<h1>Contact me</h1>
+		<section style={styles.container}>
+			<h1 style={styles.header}>Contact me</h1>
 			<form id="contact-form" onSubmit={handleSubmit}>
-				<div className="nameForm">
-					<label htmlFor="name">Name:</label>
-					{/* default value initializes the state, onBlur eventListener syncs the state or updates current data while data is typed */}
-					<input type='text' defaultValue={name} onBlur={handleChange} name='name' />
+				<div style={styles.formGroup}>
+					<label htmlFor="name" style={styles.label}>Name:</label>
+					<input type='text' defaultValue={name} onBlur={handleChange} name='name' style={styles.input} />
 				</div>
-				<div>
-					<label htmlFor="email">Email Address:</label>
-					<input type='email' defaultValue={email} onBlur={handleChange} name='email' />
+				<div style={styles.formGroup}>
+					<label htmlFor="email" style={styles.label}>Email Address:</label>
+					<input type='email' defaultValue={email} onBlur={handleChange} name='email' style={styles.input} />
 				</div>
-				<div>
-					<label htmlFor="message">Message:</label>
-					<textarea type='message' defaultValue={message} onBlur={handleChange} rows='5' />
+				<div style={styles.formGroup}>
+					<label htmlFor="message" style={styles.label}>Message:</label>
+					<textarea type='message' defaultValue={message} onBlur={handleChange} rows='5' style={styles.textarea} />
 				</div>
-				{/* only want this error message to appear if errorMessage contains error message */}
 				{errorMessage && (
-					<div>
-						<p className="error-text">{errorMessage}</p>
+					<div style={styles.errorContainer}>
+						<p className="error-text" style={styles.errorText}>{errorMessage}</p>
 					</div>
 				)}
-				<button type="submit">Submit</button>
+				<button type="submit" style={styles.button}>Submit</button>
 			</form>
 		</section>
-	)
+	);
 }
+
+const styles = {
+	container: {
+		margin: '20px auto',
+		padding: '20px',
+		width: '80%',
+		border: '1px solid #ccc',
+		borderRadius: '5px',
+	},
+
+	header: {
+		textAlign: 'center',
+		fontSize: '24px',
+		marginBottom: '20px',
+	},
+
+	formGroup: {
+		marginBottom: '20px',
+	},
+
+	label: {
+		display: 'block',
+		fontSize: '16px',
+	},
+
+	input: {
+		width: '100%',
+		padding: '10px',
+		fontSize: '16px',
+		border: '1px solid #ccc',
+		borderRadius: '5px',
+	},
+
+	textarea: {
+		width: '100%',
+		padding: '10px',
+		fontSize: '16px',
+		border: '1px solid #ccc',
+		borderRadius: '5px',
+		resize: 'vertical',
+	},
+
+	errorContainer: {
+		backgroundColor: '#ffe6e6',
+		border: '1px solid #ff9999',
+		padding: '10px',
+		borderRadius: '5px',
+		marginTop: '10px',
+	},
+
+	errorText: {
+		color: '#ff0000',
+		fontSize: '14px',
+		margin: '0',
+	},
+
+	button: {
+		backgroundColor: '#007bff',
+		color: '#fff',
+		padding: '10px 20px',
+		border: 'none',
+		borderRadius: '5px',
+		fontSize: '18px',
+		cursor: 'pointer',
+	},
+};
